@@ -13,3 +13,4 @@ def manga(request):
 	table = MangaTable(Manga.objects.all())
 	RequestConfig(request).configure(table)
 	return render(request, 'manga/index.html', {'manga': table})
+

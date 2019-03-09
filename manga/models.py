@@ -1,5 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
+from misc import mangaScrape
+
+
 """
 References:
 
@@ -11,6 +14,9 @@ https://stackoverflow.com/questions/17520720/movie-database-storing-multiple-gen
 """
 
 # Create your models here.
+class MangaManager(models.Manager):
+	
+
 class Manga(models.Model):
 
 	id = models.AutoField(primary_key=True)
@@ -26,6 +32,8 @@ class Manga(models.Model):
 
 	def __str__(self):
 		return self.title
+
+
 
 # TODO: Complete MangaGenre model.
 class MangaGenre(models.Model):

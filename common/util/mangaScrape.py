@@ -101,10 +101,12 @@ def retrieve_data(url_1, url_2):
     manga_details["pub status"] = get_pub_status(malSoup)
 
     manga_details["date uploaded"] = arrow.now().format('DD/MM/YYYY')
+    manga_details["url chapter"] = url_1
+    manga_details["url metadata"] = url_2
 
     return manga_details
 
 if __name__ == "__main__":
     # "https://jaiminisbox.com/reader/series/one-piece-2/"
-    curr_dict = retrieve_data("https://jaiminisbox.com/reader/series/we-can-t-study", "https://myanimelist.net/manga/13/One_Piece")
+    curr_dict = retrieve_data("https://jaiminisbox.com/reader/series/we-can-t-study", "https://myanimelist.net/manga/103890/Bokutachi_wa_Benkyou_ga_Dekinai")
     print(curr_dict)
