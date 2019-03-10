@@ -39,7 +39,7 @@ def get_title(url):
     final_title = ""
     for item in split_title:
         final_title = final_title + item + " "
-    return final_title
+    return final_title[:-1] # Remove the trailing whitespace
 
 def get_author(soup_item):
     final_author = ""

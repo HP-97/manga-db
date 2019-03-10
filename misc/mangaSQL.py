@@ -45,6 +45,7 @@ add_manga = ("INSERT INTO manga_manga "
 add_mangagenre = ("INSERT INTO manga_mangagenre "
                "(manga_id, genre) "
                "VALUES (%(title)s, %(author)s, %(pub_status)s, %(latest_chapter)s, %(date_uploaded)s, %(release_date)s, %(url_chapter)s, %(url_metadata)s)")
+
 # Insert manga information
 scraped_data = mangaScrape.retrieve_data("https://jaiminisbox.com/reader/series/we-can-t-study", "https://myanimelist.net/manga/103890/Bokutachi_wa_Benkyou_ga_Dekinai")
 
